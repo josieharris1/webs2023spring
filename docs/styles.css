@@ -1,7 +1,9 @@
-/*custom fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/*Fonts*/
 @font-face {
-    font-family: 'Times New Roman', Times, serif;
-    src: url('SpecialElite-webfont.woff') format('woff');
+    font-family: 'KmStandardTtBold-raK8';
+    src: url('km-standard-tt-font/KmStandardTtBold-raK8.ttf') format('ttf');
     font-style: normal;
     font-weight: normal;
   }
@@ -13,26 +15,27 @@
     font-weight: normal;
   }
   
-  /* resets browser defaults */
+
+  /* Browser defaults */
   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*measurement now includes padding and borders*/
+    box-sizing: border-box; 
   }
   
-  /* adds smooth scroll effect to make the page section transitions more typewriter-like*/
+  /*Smooth scroll effect*/
   html {
     scroll-behavior: smooth;
   }
   
-  /* distinguishes typewriter page from background - using lighter shade of the red-pen color*/
+  /*Background color of side border*/
   body {
     background-color: #000000;
   }
 
   
   .typewriter-and-page-container {
-    margin: 0 auto; /*centers*/
+    margin: 0 auto; /*Centers*/
     max-width: 1000em;
   
     display: flex;
@@ -40,21 +43,21 @@
     justify-content: center;
   }
   
-
   
   .typewriter-page {
-    margin: 0 auto; /*centers*/
-    max-width: 65em; /*width of side border*/
+    margin: 0 auto; /*Centers*/
+    max-width: 65em; /*Width of side border*/
   
-    background-color: #FAFAFA; /* off-white */
+    background-color: #FAFAFA; 
   
     font-family: 'Times New Roman', Times, serif, monospace;
-    color: #444444; /* dark gray */
+    color: #444444;
   
     line-height: 1.5;
-    padding: 1em 1em;
-    padding-left: 8em;
-    padding-right: 8em;
+    padding-top: 2.5em;
+    padding-bottom: 1.25em;
+    padding-left: 10em;
+    padding-right: 10em;
   
     display: flex;
     justify-content: center;
@@ -73,32 +76,17 @@
     justify-content: center;
   }
   
-  .title-text {
+  .title-text { /*Music for a Sushi Restaurant*/
     align-items: center;
   
-    padding-right: .4em;
-    font-family: 'SpecialElite', "Times New Roman", monospace;
+    font-family: 'Arial';
     font-weight: normal;
     height: 1.5em;
     font-size: 1.5em;
   }
   
-  .subtitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   
-    height: 1em;
-  }
-  
-  .subtitle h1 {
-    font-family: "Times New Roman", "Times New Roman", monospace;
-    font-weight: 200;
-    font-size: 1.5em;
-    text-align: center;
-  }
-  
-  /* makes nav bar stick to top of page when it's scrolled past */
+  /* Navigation bar stays in place */
   .nav-bar-container {
     position: -webkit-sticky;
     position: sticky;
@@ -116,19 +104,19 @@
   }
   
   nav.main-nav > ul > li {
-    padding-top: 8em;
-    padding-bottom: 7.5em;
+    padding-top: 11em;
+    padding-bottom: 10em;
   }
   
   nav.main-nav > ul > li > a {
     text-decoration: none;
-    font-weight: 700; /* Use explicit font-weight, rather than relative keyword */
-    font-size: .9rem; /* Use rem instead of em to be consistent across parent/child */
-    color: #a90d70; /*red pen color*/
+    font-weight: 700; 
+    font-size: .9rem; 
+    color: #a90d70; /*Pen color*/
     padding-left: .5em;
     padding-right: .5em;
   
-    /* These get OG alignment back */
+    /*Alignment */
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -143,13 +131,12 @@
     color: #444444;
   }
   
-  /* to make invisible space for a:hover changes */
   nav.main-nav > ul > li > a::after {
     content: attr(data-text);
     content: attr(data-text) / "";
     height: 0;
-    font-size: .95rem; /* Use rem instead of em to be consistent across parent/child */
-    font-weight: 900; /* Use explicit font-weight, rather than relative keyword */
+    font-size: .95rem; 
+    font-weight: 900; 
     visibility: hidden;
     overflow: hidden;
     user-select: none;
@@ -160,45 +147,31 @@
     display: flex;
     justify-content: center;
     position: relative;
-    z-index: 1 /* puts pinned image beneath typewriter */
+    z-index: 1 
   }
   
-  /* relative absolute positioning to stick beside page section headers */
-  .section-img-book {
-    position: absolute;
-    left: 616px;
-  }
-  
-  .section-img-cafe {
-    position: absolute;
-    right: 600px;
-  }
-  
-  .section-img-poster {
-    position: absolute;
-    left: 590px;
-  }
   
   .page-section h1,
   .image-and-header h1 {
       padding-top: 1.25em;
-      padding-bottom: .25em;
-      color: #333333; /* darker charcoal for emphasis */
-      font-family: 'SpecialElite', "Times New Roman", monospace;
-      font-weight: strong;
+      padding-bottom: 0.3em;
+      color: #333333; 
+      font-family: "Arial", monospace;
+      font-weight: normal;
   
       display: flex;
       justify-content: center;
-      font-size: 1.5em;
+      font-size: 1.3em;
   }
   
-  /* fixes issue of navigation bar partially covering header on jump */
+  /* Fix navigation bar */
   h1 span {
     margin-top: -2.3em;
     padding-bottom: 2.3em;
     display: block;
   }
   
+  /*h2 settings*/
   .page-section > h2 {
     text-align: center;
     padding-top: .25em;
@@ -208,17 +181,19 @@
     font-weight: normal;
     font-family: "Times New Roman",  monospace;
   }
-  
+
+  /*h3 settings*/
   .page-section > h3 {
     display: flex;
     justify-content: center;
   
     padding-top: .5em;
-  
-    font-size: 1.25em;
-    font-weight: bold;
+    font-family: "Arial", monospace;
+    font-size: 1.5em;
+    font-weight: normal;
   }
   
+  /*h4 settings*/
   .page-section > h4 {
     display: flex;
     justify-content: center;
@@ -232,22 +207,10 @@
     color:#a90d70;
 
   }
-  .page-section > h5 {
-    display: flex;
-    justify-content: left;
   
-    text-align: center;
-    padding-top: 1em;
-  
-    font-family: "Times New Roman", monospace;
-    font-size: 5em;
-    font-weight: bold;
-    color:#a90d70;
-
-  }
-  
+  /*p settings*/
   .page-section > p {
-    padding-top: 2em;
+    padding-top: 1em;
     font-size: 1em;
   }
   
@@ -262,10 +225,9 @@
   .page-section > p > normal,
   .credits-section > a {
     text-decoration: none;
-    font-weight: 700; /* use explicit font-weight */
+    font-weight: 700; 
     color: #a90d70;
-    font-size: 1rem; /* rem to be consistent parent-child*/
-    /*to get alignment back*/
+    font-size: 1rem; 
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -274,7 +236,7 @@
   
   .page-section > p > a:hover {
     text-decoration: none;
-    font-weight: 900; /* use explicit font-weight */
+    font-weight: 900; 
     font-size: 1.05rem;
     color: #444444;
   }
@@ -284,7 +246,7 @@
     content: attr(hover-text);
     content: attr(hover-text) / "";
     height: 0;
-    font-weight: 900; /* use explicit font-weight */
+    font-weight: 900; 
     font-size: 1.05rem;
     visibility: hidden;
     overflow: hidden;
@@ -301,54 +263,46 @@
     }
   }
   
-  .menu-container > h1 {
-    padding-top: 1.5em;
-    text-align: center;
-  
-    font-family: 'SpecialElite', "Times New Roman", monospace;
-    font-weight: 600;
-    font-size: 1.5em;
-  }
-  
-  .menu-container > h2 {
-    padding-top: 2em;
-    text-align: center;
-  
-    font-size: 1.25em;
+
+  .menu-container > h2 { /*Menu categories*/
+    padding-top: 3em;
+    text-align: left;
+    font-family: "Arial", monospace;
+    font-weight: normal;
+    font-size: 1em;
   }
   
   .menu-container > h3 {
     padding-top: 1em;
     text-align: center;
-  
     font-size: 1em;
     font-style: italic;
     font-weight: normal;
   }
   
-  .item-top-bar {
+  .item-top-bar { /*Menu top bar/ food items*/
     display: flex;
     justify-content: space-between;
-  
+    
     padding-top: 1em;
-  
-    font-size: 1em;
+    font-family:"Arial", monospace;
+    font-size: .9em;
   }
   
-  .item-bottom-bar {
+  .item-bottom-bar { /*Menu bottom bar/ descriptions*/
     padding-top: .5em;
     padding-left: 2em;
   
     font-size: .85em;
-    font-style: italic;
-    font-family: "Times New Roman", monospace;
+    font-style: normal;
+    font-family:"Arial", monospace;
   }
   
   .credits-section {
-    padding-top: 2em;
+    padding-top: 3em;
     text-align: center;
     font-size: .75em;
-    padding-bottom: 20em;
+    padding-bottom: 15em;
     font-family: "Times New Roman", monospace;
   }
   
@@ -362,42 +316,11 @@
     font-size: 1.5em;
   }
   
-  @media only screen and (min-width: 686px) {
-  
-    .subtitle h1 {
-    /* typewriter effect from: https://css-tricks.com/snippets/css/typewriter-effect/ */
-      overflow: hidden; /* Ensures the content is not revealed until the animation */
-      border-right: .1em solid #a90d70; /* The typwriter cursor */
-      white-space: nowrap; /* Keeps the content on a single line */
-      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-      letter-spacing: .16em; /* Adjust as needed */
-      animation:
-        typing 3.5s steps(25, end),
-        blink-caret 1s step-end infinite;
-    }
-  
-    /* The typing effect */
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-  
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: #a90d70; }
-    }
-  
-  }
-  
-  /* makes pinned images disappear when screen size starts to make them look unintentional and cut off*/
-  @media only screen and (min-width: 686px) and (max-width: 975px) {
-    .section-img-book,
-    .section-img-cafe,
-    .section-img-poster {
-       display: none;
-    }
-  }
+   img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   }
   
   /*responsive to small screens, will update text size to fit screen and remove images that would throw off page*/
   @media only screen and (max-width: 685px) {
@@ -466,4 +389,4 @@
     .credits-section {
       padding-bottom: 4em;
     }
-  } /*removing typewriter for smaller screens - need to style nav-bar and header too*/
+  } 

@@ -1,26 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pinyon+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pinyon+Script&family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pinyon+Script&family=Playfair+Display&family=Source+Sans+Pro&display=swap');
-
-
-
-/*Fonts*/
-@font-face {
-    font-family: 'KmStandardTtBold-raK8';
-    src: url('km-standard-tt-font/KmStandardTtBold-raK8.ttf') format('ttf');
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  @font-face {
-    font-family: 'Times New Roman', cursive;
-    src: url('IndieFlower-webfont.woff') format('woff');
-    font-style: normal;
-    font-weight: normal;
-  }
-  
+  /*Custom fonts*/
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Pinyon+Script&family=Playfair+Display&display=swap');
 
   /* Browser defaults */
   * {
@@ -39,15 +19,6 @@
     background-color: #000000;
   }
 
-  
-  .typewriter-and-page-container {
-    margin: 0 auto; /*Centers*/
-    max-width: 1000em;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
   
   
   .typewriter-page {
@@ -85,7 +56,7 @@
   .title-text { /*Music for a Sushi Restaurant*/
     align-items: center;
   
-    font-family: 'Arial';
+    font-family:'Lato', sans-serif;
     font-weight: normal;
     height: 1.5em;
     font-size: 1.5em;
@@ -98,7 +69,6 @@
     position: sticky;
     top: 0;
     background-color: #FAFAFA;
-    z-index: 3; /* positions nav bar over side bar images */
   }
   
   nav.main-nav > ul {
@@ -114,11 +84,12 @@
     padding-bottom: 10em;
   }
   
-  nav.main-nav > ul > li > a {
+  nav.main-nav > ul > li > a { /*Nav bar text*/
     text-decoration: none;
-    font-weight: 700; 
+    font-weight: 900; 
     font-size: .9rem; 
     color: #a90d70; /*Pen color*/
+    font-family: 'Lato', sans-serif;
     padding-left: .5em;
     padding-right: .5em;
   
@@ -162,7 +133,7 @@
       padding-top: 1.25em;
       padding-bottom: 0.3em;
       color: #333333; 
-      font-family: "Arial", monospace;
+      font-family: 'Lato', sans-serif;
       font-weight: normal;
   
       display: flex;
@@ -182,10 +153,10 @@
     text-align: center;
     padding-top: .25em;
   
-    font-size: 1em;
+    font-size: 0.9em;
     font-style: normal;
     font-weight: normal;
-    font-family: "Times New Roman",  monospace;
+    font-family: 'Playfair Display', serif;
   }
 
   /*h3 settings*/
@@ -199,14 +170,14 @@
     font-weight: normal;
   }
   
-  /*h4 settings*/
+  /*h4 settings - separation dash*/
   .page-section > h4 {
     display: flex;
     justify-content: center;
   
     text-align: center;
     padding-top: 1em;
-  
+
     font-family: "Times New Roman", monospace;
     font-size: 1.25em;
     font-weight: lighter;
@@ -218,11 +189,13 @@
   .page-section > p {
     padding-top: 1em;
     font-size: 1em;
+
+    font-family: 'Playfair Display', serif;
   }
   
-  /* styling for the handwriting side comments */
+  /* em settings */
   em {
-    font-family: "Times New Roman", monospace;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #a90d70;
   }
@@ -247,7 +220,6 @@
     color: #444444;
   }
   
-  /* to make invisible space for a:hover changes */
   .page-section > p > a::after {
     content: attr(hover-text);
     content: attr(hover-text) / "";
@@ -273,9 +245,9 @@
   .menu-container > h2 { /*Menu categories*/
     padding-top: 3em;
     text-align: left;
-    font-family: "Arial", monospace;
+    font-family: 'Pinyon Script', cursive;
     font-weight: normal;
-    font-size: 1em;
+    font-size: 1.4em;
   }
   
   .menu-container > h3 {
@@ -289,9 +261,9 @@
   .item-top-bar { /*Menu top bar/ food items*/
     display: flex;
     justify-content: space-between;
-    
-    padding-top: 1em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300em;
+    padding-top: 0.8em;
+    font-family: 'Lato', sans-serif;
     font-size: .9em;
   }
   
@@ -301,15 +273,15 @@
   
     font-size: .85em;
     font-style: normal;
-    font-family:"Arial", monospace;
+    font-family: 'Lato', sans-serif;
   }
   
   .credits-section {
     padding-top: 3em;
     text-align: center;
-    font-size: .75em;
+    font-size: .8em;
     padding-bottom: 15em;
-    font-family: "Times New Roman", monospace;
+    font-family: "Playfair Display", serif;
   }
   
   .credits-section > p > em > a {
@@ -328,31 +300,16 @@
    margin-right: auto;
    }
   
-  /*responsive to small screens, will update text size to fit screen and remove images that would throw off page*/
-  @media only screen and (max-width: 685px) {
+/*small screens*/
+  @media only screen and (max-width: 800px) {
   
     .title-text {
       padding-right: calc(10px + .5vw);
       height: calc(30px + 1.5vh);
-      font-size: calc(25px + 1.5vw);
-    }
-  
-    .title-and-logo img {
-      height: calc(30px + 1.5vw);
-      padding-bottom: calc(4px + .5vh);
-    }
-  
-    .subtitle {
-      padding-top: calc(15px + .5vh);
-      padding-bottom: calc(15px + 1.5vh);
-    }
-  
-    .subtitle h1 {
-      font-family: "Times New Roman", monospace;
-      font-weight: 200;
-      font-size: calc(12px + 1.5vw);
+      font-size: calc(15px + 3vw);
       text-align: center;
     }
+  
   
     .nav-bar-container {
       position: static;
@@ -382,15 +339,6 @@
       text-align: center;
     }
   
-    .typewriter-image {
-      display: none;
-    }
-  
-    .section-img-book,
-    .section-img-cafe,
-    .section-img-poster {
-       display: none;
-    }
   
     .credits-section {
       padding-bottom: 4em;
